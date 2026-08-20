@@ -178,7 +178,7 @@ export const translations = {
           `,
           technologies: ["Astro", "Tailwind CSS", "Javascript", "i18n"],
           imageUrl: "/img/portfolio-photo.png",
-          link: "https://mohamed-abdelaziem-4dsfvae2v-mohamedabdelaziem10-3546s-projects.vercel.app/",
+          link: "https://mohamed-abdelaziem.vercel.app/",
           github: "https://github.com/muhmed-abdelaziem/mohamed-abdelaziem",
         },
         {
@@ -470,7 +470,7 @@ A lightning-fast, modern developer portfolio built with Astro, Tailwind CSS, and
           `,
           technologies: ["Astro", "Tailwind CSS", "Javascript", "i18n"],
           imageUrl: "/img/portfolio-photo.png",
-          link: "https://mohamed-abdelaziem-4dsfvae2v-mohamedabdelaziem10-3546s-projects.vercel.app/",
+          link: "https://mohamed-abdelaziem.vercel.app/",
           github: "https://github.com/muhmed-abdelaziem/mohamed-abdelaziem",
         },
         {
