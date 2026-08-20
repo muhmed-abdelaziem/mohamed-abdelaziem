@@ -1,0 +1,35 @@
+---
+
+---
+
+<div class="spotlight" id="spotlight"></div>
+
+<script>
+	const spotlight = document.getElementById("spotlight");
+
+	// Seguir el cursor
+	document.addEventListener("mousemove", (e) => {
+		spotlight?.style.setProperty("--x", e.clientX.toString());
+		spotlight?.style.setProperty("--y", e.clientY.toString());
+	});
+
+	// Mostrar spotlight cuando el cursor entra al viewport
+	document.addEventListener("mouseenter", () => {
+		spotlight?.classList.add("visible");
+	});
+
+	// Quitar spotlight cuando el cursor sale del viewport
+	document.addEventListener("mouseleave", () => {
+		spotlight?.classList.remove("visible");
+	});
+
+	// Mostrar spotlight al entrar en el elemento main (ej. hover en header o footer)
+	document.querySelector("main")?.addEventListener("mouseenter", () => {
+		spotlight?.classList.add("visible");
+	});
+
+	// Quitar spotlight al salir de elemento main (ej. hover en header o footer)
+	document.querySelector("main")?.addEventListener("mouseleave", () => {
+		spotlight?.classList.remove("visible");
+	});
+</script>

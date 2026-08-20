@@ -1,0 +1,133 @@
+---
+import Header from "@components/Header.astro";
+import Footer from "@components/Footer.astro";
+import Spotlight from "@/components/Spotlight.astro";
+import type { Lang } from "@/i18n/translations";
+import { t } from "@/i18n/translations";
+
+import '@styles/global.css';
+
+interface Props {
+	lang?: Lang;
+	title?: string;
+	description?: string;
+	keywords?: string;
+	googleAnalyticsId?: string;
+}
+
+const { lang = 'ar', googleAnalyticsId } = Astro.props;
+const tr = t(lang);
+
+const title       = Astro.props.title       ?? tr.layout.title;
+const description = Astro.props.description ?? tr.layout.description;
+const keywords    = Astro.props.keywords    ?? tr.layout.keywords;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const socialImageURL = new URL("/img/my-photo.png", Astro.url);
+---
+
+<html lang={tr.layout.htmlLang} dir={lang == 'ar' ? 'rtl' : 'ltr' } class="scroll-smooth scroll-pt-20">
+	<head>
+		<!-- Google Fonts (Arabic & English Optimized) -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+			
+		<!-- SEO Principal -->
+		<title>{title}</title>
+		<meta name="description" content={description} />
+		<meta name="keywords" content={keywords} />
+		<meta name="author" content="Mohamed Abdelaziem" />
+		<link rel="canonical" href={canonicalURL} />
+		
+		<!-- hreflang alternates -->
+		<link rel="alternate" hreflang="ar" href={new URL('/', Astro.site)} />
+		<link rel="alternate" hreflang="en" href={new URL('/en/', Astro.site)} />
+		<link rel="alternate" hreflang="x-default" href={new URL('/', Astro.site)} />
+		
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content={canonicalURL} />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:image" content={socialImageURL} />
+		<meta property="og:locale" content={tr.layout.ogLocale} />
+		<meta property="og:site_name" content="Mohamed Abdelaziem Portfolio" />
+		
+		<!-- Twitter Card -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:url" content={canonicalURL} />
+		<meta name="twitter:title" content={title} />
+		<meta name="twitter:description" content={description} />
+		<meta name="twitter:image" content={socialImageURL} />
+		
+		<!-- Robots & Theme -->
+		<meta name="robots" content="index, follow" />
+		<meta name="theme-color" content="#64ffda" />
+		
+		<!-- Google Analytics -->
+		{googleAnalyticsId && import.meta.env.PROD && (
+			<>
+				<script is:inline src={`https://www.googletagmanager.com/gtag/js?id=${googleAnalyticsId}`}></script>
+				<script is:inline define:vars={{ googleAnalyticsId }}>
+					window.dataLayer = window.dataLayer || [];
+					function gtag() {
+						dataLayer.push(arguments);
+					}
+					gtag('js', new Date());
+					gtag('config', googleAnalyticsId);
+				</script>
+			</>
+		)}
+		
+		<!-- Schema.org JSON-LD -->
+		<script type="application/ld+json" set:html={JSON.stringify({
+			"@context": "https://schema.org",
+			"@type": "Person",
+			"name": "Mohamed Abdelaziem",
+			"jobTitle": "Frontend & Full-Stack Developer",
+			"url": canonicalURL.toString(),
+			"image": socialImageURL.toString(),
+			"sameAs": [
+				"https://www.linkedin.com/in/muhmaedabdelaziem/",
+				"https://github.com/muhmed-abdelaziem"
+			],
+			"worksFor": {
+				"@type": "Organization",
+				"name": "nzm"
+			},
+			"address": {
+				"@type": "PostalAddress",
+				"addressLocality": "Cairo",
+				"addressCountry": "Egypt"
+			},
+			"knowsAbout": [
+				"Angular",
+				"TypeScript",
+				"JavaScript",
+				"Tailwind CSS",
+				"Shopify",
+				"Node.js",
+				"Express",
+				"MongoDB",
+				"RxJS",
+				"RESTful API",
+				"Frontend Development"
+			],
+			"description": description
+		})} />
+	</head>
+	<body class="bg-dark text-light font-primary">
+		<Header lang={lang} />
+		<main class="relative">
+			<Spotlight />
+			<slot />
+		</main>
+		<Footer lang={lang} />
+	</body>
+</html>

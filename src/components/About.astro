@@ -1,0 +1,161 @@
+---
+import SectionLayout from "@/layouts/SectionLayout.astro";
+import Card from "@/components/Card.astro";
+import { Icon } from "astro-icon/components";
+import type { Lang } from "@/i18n/translations";
+import { t } from "@/i18n/translations";
+
+interface Props {
+	lang?: Lang;
+}
+
+const { lang = 'ar' } = Astro.props;
+const tr = t(lang);
+
+const certifications = [
+	{
+		title: "Freelancing Skills (ITIDA)",
+		issuer: "ITIDA",
+		icon: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9blbpihkjjJhch3mxIIIK8HahbF9JqK1PDEHtNS2org&s=10",
+		link: "https://drive.google.com/file/d/1lP_TD8QbnUnkcy280MlVunupN4j6W-OY/view?usp=sharing",
+	},
+	{
+		title: "Frontend Angular (Route)",
+		issuer: "Route",
+		icon: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMXCzt2tgFpTHI8f4ELBoAUtW6e3uzXeSMGPtrFQrT-Q&s",
+		link: "https://drive.google.com/file/d/1RXYCPEUjXLHkTqSS9MFpoCQlhc9ueLS1/view?usp=sharing",
+	},
+	{
+		title: "Mean Stack (NTI)",
+		issuer: "NTI",
+		icon: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1dqnSL9PSVueJxwQoXpsko4d7YErgMSrAua6QDLsVWw&s=10",
+		link: "https://drive.google.com/file/d/1LMuPfZZlmzB0c4_bOZwYfWldKHkuXYTo/view?usp=sharing",
+	},
+	{
+		title: "Full Stack Laravel (ITI)",
+		issuer: "ITI",
+		icon: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT69eSORZ7di7MoRlWenk738JSU60f1C4GBFXl_kLh7HA&s=10",
+		link: "https://drive.google.com/file/d/1e-ObDgT1qAIL7WaFc0aHYv43CfY0-HUu/view?usp=sharing",
+	},
+];
+
+const technologies = [
+	{ name: "HTML", icon: "/img/logos/html_icon.svg" },
+	{ name: "CSS", icon: "/img/logos/css_icon.svg" },
+	{ name: "JavaScript", icon: "/img/logos/js_icon.svg" },
+	{ name: "TypeScript", icon: "/img/logos/typescript_icon.svg" },
+	{ name: "React", icon: "/img/logos/react_icon.svg" },
+	{ name: "Angular", icon: "/img/logos/angular-logo.webp" },
+	{ name: "Node Js", icon: "/img/logos/node-logo.png" },
+	{ name: "Express Js", icon: "/img/logos/express-logo.png" },
+	{ name: "MongoDB", icon: "/img/logos/mongo-logo.png" },
+	{ name: "Next Js", icon: "/img/logos/next-logo.webp" },
+	{ name: "Tailwind CSS", icon: "/img/logos/Tailwind_icon.svg" },
+	{ name: "Sass", icon: "/img/logos/sass-logo.webp" },
+	{ name: "Shopify", icon: "/img/logos/shopify-logo.png" },
+	{ name: "Wordpress", icon: "/img/logos/wordpress-logo.png" },
+	{ name: "React Hook Form", icon: "/img/logos/react-hook-form.webp" },
+	{ name: "Zod Library", icon: "/img/logos/zod-logo.webp" },
+	{ name: "Payment Getway", icon: "/img/logos/payment-getway.png" },
+	{ name: "Vs Code", icon: "/img/logos/vs-logo.png" },
+	{ name: "Git", icon: "/img/logos/git_icon.svg" },
+	{ name: "Github", icon: "/img/logos/github_icon.svg" },
+	{ name: "Figma", icon: "/img/logos/figma_icon.svg" },
+	{ name: "Linux", icon: "/img/logos/linux_icon.svg" },
+	{ name: "Postman", icon: "/img/logos/postman-logo.webp" },
+];
+---
+
+<SectionLayout id="about" isDark={true}>
+	<!-- الحاوية العامة مع مسافات جانبية مريحة للموبايل -->
+	<div class="px-4 sm:px-0 w-full max-w-7xl mx-auto">
+		
+		<!-- العنوان -->
+		<div class="flex flex-row items-center gap-3 text-3xl sm:text-4xl mb-6">
+			<span class="bg-dark text-accent p-2 rounded-lg">{tr.about.badge}</span>
+			<h2>{tr.about.title}</h2>
+		</div>
+
+		<!-- الشبكة الرئيسية -->
+		<div class="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-10 my-5 mb-8">
+			
+			<!-- الجانب الأيسر (النبذة والكروت السفلية) -->
+			<div class="lg:col-span-2 flex flex-col justify-between gap-6">
+				<Card isDark class="p-5 sm:p-8">
+					<h3 class="text-xl sm:text-2xl font-semibold mb-6 text-start">
+						{tr.about.whoTitle}
+					</h3>
+					<div class="flex flex-col justify-between gap-6 text-slate-300 leading-relaxed text-start text-sm sm:text-base">
+						<p set:html={tr.about.bio1} />
+						<p set:html={tr.about.bio2} />
+					</div>
+				</Card>
+
+				<!-- الكروت التحتية (مضبوطة بمسافات آمنة) -->
+				<div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+					<Card isDark contentDirection="row" class="p-4 sm:p-5">
+						<div class="bg-[#1e293b] p-3 rounded-xl me-3 shrink-0">
+							<Icon name="macbook" class="text-[var(--color-primary)] w-7 h-7 sm:w-8 sm:h-8" />
+						</div>
+						<div class="text-start">
+							<p class="text-[11px] sm:text-xs uppercase tracking-wider font-semibold text-slate-500">
+								{tr.about.workingAt}
+							</p>
+							<p class="text-white font-medium text-sm sm:text-base">NZM</p>
+						</div>
+					</Card>
+
+					<Card isDark contentDirection="row" class="p-4 sm:p-5">
+						<div class="bg-[#1e293b] p-3 rounded-xl me-3 shrink-0">
+							<Icon name="student" class="text-[var(--color-primary)] w-7 h-7 sm:w-8 sm:h-8" />
+						</div>
+						<div class="text-start">
+							<p class="text-[11px] sm:text-xs uppercase tracking-wider font-semibold text-slate-500">
+								{tr.about.studyingAt}
+							</p>
+							<p class="text-white font-medium text-xs sm:text-sm">Frontend Engineer & E-Commerce Developer</p>
+						</div>
+					</Card>
+				</div>
+			</div>
+
+			<!-- الجانب الأيمن (الشهادات) -->
+			<div class="lg:col-span-1">
+				<Card isDark class="!my-0 flex-col p-5 sm:p-6">
+					<h3 class="text-xl sm:text-2xl mb-5 font-medium text-start">{tr.about.certTitle}</h3>
+					<div class="flex flex-col gap-3 sm:gap-4">
+						{certifications.map((cert) => (
+							<a
+								href={cert.link}
+								target="_blank"
+								class="bg-[#1e293b] p-3 rounded-xl flex items-center gap-3 sm:gap-4 hover:bg-[#28323f] transition-all ease text-start"
+							>
+								<div class="w-9 h-9 sm:w-10 sm:h-10 shrink-0">
+									<img class="rounded-lg w-full h-full object-cover" src={cert.icon} alt={cert.title} />
+								</div>
+								<div class="flex-grow min-w-0">
+									<h4 class="font-bold text-white text-xs sm:text-sm truncate">{cert.title}</h4>
+									<p class="text-[10px] sm:text-[11px] font-bold text-accent uppercase tracking-wider">{cert.issuer}</p>
+								</div>
+							</a>
+						))}
+					</div>
+				</Card>
+			</div>
+		</div>
+
+		<!-- قسم التكنولوجيا -->
+		<Card isDark class="p-5 sm:p-8">
+			<h3 class="text-xl sm:text-2xl font-semibold mb-6 text-center lg:text-start">{tr.about.techTitle}</h3>
+			<div class="flex flex-wrap gap-2 sm:gap-3 justify-center lg:justify-start">
+				{technologies.map((tech) => (
+					<div class="flex items-center gap-2 px-3 py-1.5 sm:px-4 sm:py-2 border border-slate-700 rounded-xl bg-[#141820] hover:bg-[#28323f] transition-all ease cursor-default">
+						<img src={tech.icon} alt={`${tech.name} logo`} class="w-4 h-4 sm:w-5 sm:h-5 shrink-0" />
+						<span class="text-xs sm:text-sm text-slate-200">{tech.name}</span>
+					</div>
+				))}
+			</div>
+		</Card>
+
+	</div>
+</SectionLayout>

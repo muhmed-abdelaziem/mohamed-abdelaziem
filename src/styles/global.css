@@ -1,0 +1,176 @@
+@import "tailwindcss";
+
+* {
+font-family: "Cairo", sans-serif !important;
+}
+
+
+:root {
+    /* Paleta de colores ajustada a tu marca */
+    --color-primary: #64ffda; /* الأخضر النيون البارز للـ Accent */
+    --color-dark: #51164E;    /* لونك الأساسي الموف الغامق كخلفية رئيسية */
+    --color-light: #e6f1ff;   /* لون ناصع ومريح للنصوص الفاتحة */
+    --color-text: #ccd6f6;    /* لون النصوص العامة القريب للـ Slate الفاتح */
+
+    /* Fuentes */
+    --font-primary: 'Sansation', sans-serif;
+    --font-secondary: 'Roboto', sans-serif;
+}
+
+/* Para la mayoría de navegadores */
+::selection {
+  background-color: #64ffda;
+  color: #51164E;
+}
+
+/* Para Firefox */
+::-moz-selection {
+  background-color: #64ffda;
+  color: #51164E;
+}
+
+
+@layer utilities {
+    .bg-dark {
+        background-color: var(--color-dark);
+    }
+    .bg-light {
+        background-color: var(--color-light);
+    }
+    .bg-accent {
+        background-color: var(--color-primary);
+    }
+    .text-dark {
+        color: var(--color-dark);
+    }
+    .text-light {
+        color: var(--color-light);
+    }
+    .text-accent {
+        color: var(--color-primary);
+    }
+    .font-primary {
+        font-family: var(--font-primary);
+    }
+}
+
+.main-btn {
+    color: var(--color-light);
+    font-family: var(--font-primary);
+    border: 2px solid;
+    transition: all 0.3s ease;
+    &:hover {
+        color: var(--color-primary);
+        border: 2px solid var(--color-primary);
+    }
+    &:active {
+        background-color: rgba(100, 255, 218, 0.2);
+        color: var(--color-dark);
+    }
+}
+
+a.active {
+    color: var(--color-primary);
+    transition: all .3s ease-in-out;
+}
+
+.main-btn.active {
+    color: var(--color-dark);
+    border-color: var(--color-primary);
+    background-color: var(--color-primary);
+}
+
+.ability-item {
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.button-icon {
+    position: relative;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    width: fit-content;
+}
+
+.button-icon .button-text {
+    display: inline-block;
+    max-width: 0;
+    opacity: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    margin-left: 0;
+    transition: max-width 0.4s cubic-bezier(0.4, 0, 0.2, 1), 
+                opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0.1s,
+                margin-left 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.button-icon:hover .button-text {
+    max-width: 200px;
+    opacity: 1;
+    margin-left: 0.5rem;
+}
+
+.button-icon .icon-btn {
+    transition: transform 0.3s ease;
+}
+
+.button-icon:hover .icon-btn {
+    transform: translateX(0);
+}
+
+.spotlight {
+    background-color: #3d133b; /* تدرج أغمق مناسب للموف الأساسي في إضاءة السبوتلايت */
+    position: fixed;
+    top: -200px;
+    left: -250px;
+    transform: translate(calc(var(--x) * 1px), calc(var(--y) * 1px));
+    height: 400px;
+    width: 500px;
+    filter: blur(180px);
+    border-radius: 50%;
+    transition: opacity .5s ease-in-out, transform 0s linear;
+    z-index: 1;
+    will-change: transform;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.spotlight.visible {
+    opacity: .25;
+}
+
+
+
+/* الـ ستايل (CSS) */
+.avatar-wrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 280px;
+  height: 280px;
+  background-color: #64ffda; /* لون الأخضر النيون المتناسق مع براندك */
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(100, 255, 218, 0.2);
+}
+
+.avatar-circle {
+  width: 92%; /* كبرنا مساحة الدايرة الداخلية عشان الإطار النيون الخارجي يكون رفيع ودقيق */
+  height: 92%;
+  background-color: #51164E; /* لون الموف الفخم بتاعك */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.avatar-img {
+  width: 108%;
+  height: 108%;
+  object-fit: cover;
+  object-position: center top; 
+  position: absolute;
+  bottom: -8%; 
+  filter: contrast(105%) brightness(98%);
+}
