@@ -68,7 +68,7 @@ const technologies = [
 
 <SectionLayout id="about" isDark={true}>
 	<!-- الحاوية العامة مع مسافات جانبية مريحة للموبايل -->
-	<div class="px-4 sm:px-0 w-full max-w-7xl mx-auto">
+	<div class="sm:px-0 w-full max-w-7xl mx-auto ">
 		
 		<!-- العنوان -->
 		<div class="flex flex-row items-center gap-3 text-3xl sm:text-4xl mb-6">
@@ -77,7 +77,7 @@ const technologies = [
 		</div>
 
 		<!-- الشبكة الرئيسية -->
-		<div class="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-10 my-5 mb-8">
+		<div class="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-10 my-5 mb-8 ">
 			
 			<!-- الجانب الأيسر (النبذة والكروت السفلية) -->
 			<div class="lg:col-span-2 flex flex-col justify-between gap-6">
@@ -93,8 +93,8 @@ const technologies = [
 
 				<!-- الكروت التحتية (مضبوطة بمسافات آمنة) -->
 				<div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
-					<Card isDark contentDirection="row" class="p-4 sm:p-5">
-						<div class="bg-[#1e293b] p-3 rounded-xl me-3 shrink-0">
+					<Card isDark contentDirection="row">
+						<div class="bg-[#1e293b] rounded-xl me-3 shrink-0">
 							<Icon name="macbook" class="text-[var(--color-primary)] w-7 h-7 sm:w-8 sm:h-8" />
 						</div>
 						<div class="text-start">
@@ -105,7 +105,7 @@ const technologies = [
 						</div>
 					</Card>
 
-					<Card isDark contentDirection="row" class="p-4 sm:p-5">
+					<Card isDark contentDirection="row">
 						<div class="bg-[#1e293b] p-3 rounded-xl me-3 shrink-0">
 							<Icon name="student" class="text-[var(--color-primary)] w-7 h-7 sm:w-8 sm:h-8" />
 						</div>
@@ -121,7 +121,7 @@ const technologies = [
 
 			<!-- الجانب الأيمن (الشهادات) -->
 			<div class="lg:col-span-1">
-				<Card isDark class="!my-0 flex-col p-5 sm:p-6">
+				<Card isDark class="!my-0 flex-col  ">
 					<h3 class="text-xl sm:text-2xl mb-5 font-medium text-start">{tr.about.certTitle}</h3>
 					<div class="flex flex-col gap-3 sm:gap-4">
 						{certifications.map((cert) => (
@@ -145,9 +145,9 @@ const technologies = [
 		</div>
 
 		<!-- قسم التكنولوجيا -->
-		<Card isDark class="p-5 sm:p-8">
-			<h3 class="text-xl sm:text-2xl font-semibold mb-6 text-center lg:text-start">{tr.about.techTitle}</h3>
-			<div class="flex flex-wrap gap-2 sm:gap-3 justify-center lg:justify-start">
+		<Card isDark>
+			<h3 class="text-xl sm:text-2xl font-semibold mb-6 text-start">{tr.about.techTitle}</h3>
+			<div class="flex flex-wrap gap-2 sm:gap-3 justify-start">
 				{technologies.map((tech) => (
 					<div class="flex items-center gap-2 px-3 py-1.5 sm:px-4 sm:py-2 border border-slate-700 rounded-xl bg-[#141820] hover:bg-[#28323f] transition-all ease cursor-default">
 						<img src={tech.icon} alt={`${tech.name} logo`} class="w-4 h-4 sm:w-5 sm:h-5 shrink-0" />
