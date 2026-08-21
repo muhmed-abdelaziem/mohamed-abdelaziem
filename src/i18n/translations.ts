@@ -44,7 +44,7 @@ export const translations = {
         {
           company: "NZM",
           role: "Frontend Angular & E-Commerce Developer",
-          duration: "الحاضر - 2025",
+          duration: "2025 - الحاضر",
           isActive: true,
           description: `
      هندسة وتطوير أنظمة Web و E-commerce ecosystems عالية الأداء، مع إعداد تكوينات مخصصة (Custom Configurations)، وتكاملات استراتيجية، وتحسينات متقدمة للسرعة والأداء (Speed and Performance Optimization).<br/>
