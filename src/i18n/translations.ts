@@ -243,7 +243,7 @@ export const translations = {
           github: "https://alhilalmedlabs.com/",
         },
         {
-          title: "Dr.huda Al Musalem",
+          title: "Dr.Huda Al Musalem",
           description: `
 منصة رعاية صحية وإكلينيكية متخصصة للاستشارات الطبية ورعاية المرضى، مع واجهة مستخدم نظيفة وتجربة حجز واستعلام سلسة.
           `,
@@ -534,7 +534,7 @@ A medical diagnostic web platform designed for healthcare awareness and lab serv
           github: "https://alhilalmedlabs.com/",
         },
         {
-          title: "Dr.huda Al Musalem",
+          title: "Dr.Huda Al Musalem",
           description: `
 A professional healthcare and clinical web platform designed for medical consultations and specialized patient care, featuring a clean UI/UX, service overviews, and a seamless booking and inquiry experience.
           `,
