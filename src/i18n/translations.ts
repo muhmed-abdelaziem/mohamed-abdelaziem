@@ -18,7 +18,7 @@ export const translations = {
       role: "Frontend Engineer & E-Commerce Developer",
       years: "+٢ سنوات",
       description:
-        " من الخبرة في بناء بنيات برمجية متقدمة وتطوير منصات الويب الرقمية.",
+        " من الخبرة في بناء بنيات برمجية متقدمة وتطوير منصات الويب الرقمية والتجارة الإلكترونية.",
       cta: "هل نبدأ العمل؟",
       ariaDown: "التمرير إلى القسم التالي",
     },
@@ -28,8 +28,8 @@ export const translations = {
       badge: "٠١.",
       title: "عني",
       whoTitle: "من هو محمد عبد العظيم؟",
-      bio1: 'أنا <strong class="text-white">مطور واجهات أمامية ومطور شامل (Frontend Engineer & E-Commerce Developer)</strong> أركز على بناء تجارب رقمية عالية الأداء. متخصص في استخدام <span class="font-[500] text-[var(--color-primary)]">Angular, Tailwind CSS, PrimeNG و Node.js</span>، وأقوم بتصميم واجهات قابلة للتوسع وتحسين بيئات التجارة الإلكترونية مثل Shopify.',
-      bio2: "أقود فرقاً إبداعية وأنسق استراتيجيات رقمية متعددة المنصات، وأربط بين التطوير التقني المتقدم والرؤية التجارية القوية لتحقيق نتائج حقيقية.",
+      bio1: 'أنا <strong class="text-white">مهندس واجهات أمامية ومطور تجارة إلكترونية (Frontend Engineer & E-Commerce Developer)</strong> أركز على بناء تجارب رقمية عالية الأداء. متخصص في استخدام <span class="font-[500] text-[var(--color-primary)]">Angular, React.js, Tailwind CSS, PrimeNG و Node.js</span>، وأقوم بتصميم واجهات قابلة للتوسع وتطوير متاجر وتطبيقات التجارة الإلكترونية مثل Shopify و WordPress.',
+      bio2: "أربط بين التطوير التقني المتقدم والرؤية التجارية القوية لتحقيق نتائج حقيقية ورفع معدلات التحويل للمتاجر والتطبيقات.",
       workingAt: "أقود العمل في",
       studyingAt: "أبني في",
       certTitle: "الكورسات",
@@ -43,23 +43,23 @@ export const translations = {
       items: [
         {
           company: "NZM",
-          role: "Frontend Angular & E-Commerce Developer",
+          role: "Frontend Engineer & E-Commerce Developer",
           duration: "2025 - الحاضر",
           isActive: true,
           description: `
-     هندسة وتطوير أنظمة Web و E-commerce ecosystems عالية الأداء، مع إعداد تكوينات مخصصة (Custom Configurations)، وتكاملات استراتيجية، وتحسينات متقدمة للسرعة والأداء (Speed and Performance Optimization).<br/>
-استكشاف أخطاء التطبيقات المعقدة وإصلاحها (Troubleshooting & Debugging) عبر مختلف المتصفحات والأجهزة لضمان تجربة مستخدم سلسة ومتجاوبة (Responsive User Experience).
+تطوير وهندسة تطبيقات ويب ومتاجر إلكترونية عالية الأداء باستخدام React.js و Angular و WordPress و Shopify.<br/>
+ربط بوابات الدفع الإلكتروني والـ RESTful APIs مع تطبيق تحسينات متقدمة للسرعة والأداء لتقديم تجربة مستخدم سلسة.
           `,
         },
 
         {
           company: "Torvo Solutions",
-          role: "Frontend Angular & Automation Developer",
+          role: "Frontend Engineer & Automation Developer",
           duration: "2024 - 2025",
           isActive: true,
           description: `
-تطوير تطبيقات Angular متجاوبة وعالية الأداء، والتعاون الوثيق لتحويل تصميمات الـ UI إلى كود نظيف وقابل للتوسع (Scalable).<br/>
-تصميم هندسة لـ Automation Workflows قوية وربط الـ RESTful APIs لتبسيط العمليات التجارية وتعزيز تفاعل المستخدمين (User Engagement).
+تطوير تطبيقات ويب متجاوبة وعالية الأداء باستخدام Angular مع تحويل تصميمات Figma إلى كود نظيف وقابل للتوسع.<br/>
+تصميم أنظمة أوتوميشن (Automation Workflows) قوية وربط الـ RESTful APIs لتبسيط العمليات التجارية وتعزيز تفاعل المستخدمين.
           `,
         },
       ],
@@ -288,11 +288,11 @@ export const translations = {
     layout: {
       htmlLang: "ar",
       ogLocale: "ar_AR",
-      title: "محمد عبد العظيم - مطور واجهات أمامية وتطوير ويب",
+      title: "محمد عبد العظيم - مهندس واجهات أمامية ومطور تجارة إلكترونية",
       description:
-        "مطور واجهات أمامية متخصص في Angular و Tailwind و Shopify. بناء هندسة الويب والتجارب الرقمية المتقدمة.",
+        "مهندس واجهات أمامية متخصص في Angular و React و Tailwind و Shopify. بناء هندسة الويب وتطوير تجارب رقمية متقدمة.",
       keywords:
-        "محمد عبد العظيم, مطور واجهات, مطور أنجولر, تايلميند, شوبيفاي, تطوير ويب, بورتفوليو",
+        "محمد عبد العظيم, مطور واجهات, مهندس واجهات, رياكت, أنجولر, تايلميند, شوبيفاي, تطوير ويب, بورتفوليو",
     },
   },
 
@@ -311,7 +311,7 @@ export const translations = {
       role: "Frontend Engineer & E-Commerce Developer",
       years: "+2 years",
       description:
-        " of experience building advanced web architectures and optimizing digital platforms.",
+        " of experience building advanced web architectures, e-commerce stores, and optimizing digital platforms.",
       cta: "Let's talk?",
       ariaDown: "Scroll to next section",
     },
@@ -320,8 +320,8 @@ export const translations = {
       badge: "01.",
       title: "About me",
       whoTitle: "Who is Mohamed Abdelaziem?",
-      bio1: 'I am a <strong class="text-white">Frontend Engineer & E-Commerce Developer</strong> focused on building high-performance digital experiences. Specializing in <span class="font-[500] text-[var(--color-primary)]">Angular, Tailwind CSS, PrimeNG and Node.js</span>, I design scalable interfaces and optimize E-commerce environments like Shopify.',
-      bio2: "I lead creative teams and coordinate multi-platform digital strategies, bridging advanced technical development with solid business vision to deliver tangible results.",
+      bio1: 'I am a <strong class="text-white">Frontend Engineer & E-Commerce Developer</strong> focused on building high-performance digital experiences. Specializing in <span class="font-[500] text-[var(--color-primary)]">Angular, React.js, Tailwind CSS, PrimeNG and Node.js</span>, I design scalable interfaces and optimize E-commerce environments like Shopify and WordPress.',
+      bio2: "I bridge advanced technical development with solid business vision to deliver tangible results and drive high conversion rates.",
       workingAt: "Leading at",
       studyingAt: "Building at",
       certTitle: "Courses",
@@ -334,26 +334,22 @@ export const translations = {
       items: [
         {
           company: "NZM",
-          role: "Frontend Angular & E-Commerce Developer",
+          role: "Frontend Engineer & E-Commerce Developer",
           duration: "2025 — Present",
           isActive: true,
           description: `
-• Engineered high-performance web and e-commerce ecosystems, featuring custom configurations, strategic
-integrations, and advanced speed and performance optimization.<br/>
-• Troubleshot and debugged complex applications across different browsers and devices to ensure a smooth,
-responsive user experience.
+• Engineered high-performance web applications and e-commerce stores using React.js, Angular, WordPress, and Shopify.<br/>
+• Integrated payment gateways and RESTful APIs while implementing advanced speed optimization to deliver seamless user experiences.
           `,
         },
         {
           company: "Torvo Solutions",
-          role: "Frontend Angular & Automation Developer",
+          role: "Frontend Engineer & Automation Developer",
           duration: "2024 — 2025",
           isActive: true,
           description: `
-• Developed responsive, high-performance Angular applications and collaborated closely to translate UI designs
-into clean, scalable code.<br/>
-• Architected robust automation workflows and integrated RESTful APIs to streamline business operations and boost
-user engagement.
+• Developed high-performance, responsive web applications using Angular, translating Figma designs into clean, scalable code.<br/>
+• Built robust automation workflows and integrated RESTful APIs to streamline business processes, optimize operations, and enhance user engagement.
 `,
         },
       ],
@@ -579,11 +575,11 @@ A professional healthcare and clinical web platform designed for medical consult
     layout: {
       htmlLang: "en",
       ogLocale: "en_US",
-      title: "Mohamed Abdelaziem - Frontend & Angular Developer",
+      title: "Mohamed Abdelaziem - Frontend Engineer & E-Commerce Developer",
       description:
-        "Frontend Developer specialized in Angular, Tailwind and Shopify. Building web architectures and advanced digital experiences.",
+        "Frontend Engineer specialized in Angular, React, Tailwind and Shopify. Building web architectures and advanced digital experiences.",
       keywords:
-        "Mohamed Abdelaziem, Frontend Developer, Angular Developer, TypeScript, Tailwind CSS, Shopify, Web Developer, Portfolio",
+        "Mohamed Abdelaziem, Frontend Engineer, React Developer, Angular Developer, TypeScript, Tailwind CSS, Shopify, Web Developer, Portfolio",
     },
   },
 } as const;
