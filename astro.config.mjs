@@ -8,13 +8,13 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://fmorenil.dev', // Cambiar por tu dominio real
+  site: 'https://mohamed-abdelaziem.vercel.app/', // Cambiar por tu dominio real
   vite: {
     plugins: [tailwindcss()]
   },
   i18n: {
-    defaultLocale: 'ar',
-    locales: ['ar', 'en'],
+    defaultLocale: 'en',
+    locales: ['en', 'ar'],
     routing: {
       prefixDefaultLocale: false,
     },

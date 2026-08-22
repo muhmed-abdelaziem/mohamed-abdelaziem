@@ -46,10 +46,10 @@ const socialImageURL = new URL("/img/my-photo.png", Astro.url);
 		<link rel="canonical" href={canonicalURL} />
 		
 		<!-- hreflang alternates -->
-		<link rel="alternate" hreflang="ar" href={new URL('/', Astro.site)} />
-		<link rel="alternate" hreflang="en" href={new URL('/en/', Astro.site)} />
-		<link rel="alternate" hreflang="x-default" href={new URL('/', Astro.site)} />
-		
+<link rel="alternate" hreflang="en" href={new URL('/', Astro.site)} />
+<link rel="alternate" hreflang="ar" href={new URL('/ar/', Astro.site)} />
+<link rel="alternate" hreflang="x-default" href={new URL('/', Astro.site)} />
+
 		<!-- Open Graph / Facebook -->
 		<meta property="og:type" content="website" />
 		<meta property="og:url" content={canonicalURL} />

@@ -7,32 +7,29 @@ interface Props {
 	lang?: Lang;
 }
 
-const { lang = "ar" } = Astro.props;
+const { lang = "en" } = Astro.props;
 const tr = t(lang);
 
 const links = [
-	{ href: "#about", text: tr.nav.about , target:"_self" },
-	{ href: "#experience", text: tr.nav.experience  , target:"_self"},
-	{ href: "#work", text: tr.nav.projects , target:"_self"},
-	{ href: tr.contact.cvUrl, text: tr.nav.cv , target:"_blank" },
+	{ href: "#about", text: tr.nav.about, target: "_self" },
+	{ href: "#experience", text: tr.nav.experience, target: "_self" },
+	{ href: "#work", text: tr.nav.projects, target: "_self" },
+	{ href: tr.contact.cvUrl, text: tr.nav.cv, target: "_blank" },
 ];
 
-const otherLang = lang === "ar" ? "en" : "ar";
-const otherLangUrl = lang === "ar" ? "/en/" : "/";
+const otherLang = lang === "en" ? "ar" : "en";
+const otherLangUrl = lang === "en" ? "/ar/" : "/";
 ---
 
-<header  class="fixed top-0 left-0 right-0 z-50 mx-auto  w-fit ">
+<header class="fixed top-0 left-0 right-0 z-50 mx-auto w-fit">
 	<BoxLayout isBlur hasBorder={false}>
-		<nav
-
-			class="flex items-center justify-between gap-3 sm:gap-3 md:gap-4  text-sm md:text-base"
-		>
+		<nav class="flex items-center justify-between gap-3 sm:gap-3 md:gap-4 text-sm md:text-base">
 			{
-				links.map(({ href, text ,target}) => (
+				links.map(({ href, text, target }) => (
 					<a
-					target={target}
+						target={target}
 						href={href}
-						class="whitespace-nowrap  hover:text-[#c7ff24] transition-colors"
+						class="whitespace-nowrap hover:text-[#c7ff24] transition-colors"
 					>
 						{text}
 					</a>
@@ -44,7 +41,7 @@ const otherLangUrl = lang === "ar" ? "/en/" : "/";
 				class="ml-1 sm:ml-2 px-2 sm:px-2.5 py-1 rounded-lg border border-slate-600 text-[10px] sm:text-xs font-bold uppercase tracking-wider text-slate-300 hover:border-[#c7ff24] hover:text-[#c7ff24] transition-colors whitespace-nowrap"
 				aria-label={`Switch to ${otherLang.toUpperCase()}`}
 			>
-				{otherLang.toLowerCase() == 'ar' ? 'AR' : 'EN'}
+				{otherLang === 'ar' ? 'AR' : 'EN'}
 			</a>
 		</nav>
 	</BoxLayout>
